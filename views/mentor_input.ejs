@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Mentor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+      padding: 2rem 0;
+      background-color: #ffc107;
+      border-bottom: 1px solid #ddd;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      height: 40px;
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    button[type="submit"] {
+      background-color: #337ab7;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #23527c;
+    }
+
+    a {
+      display: block;
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #337ab7;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.2s ease;
+    }
+
+    a:hover {
+      background-color: #23527c;
+    }
+  </style>
+</head>
+<body>
+  <h1>Add Mentor</h1>
+  <form action="/mentor_input" method="POST">
+    <label for="ment_name">Mentor Name:</label>
+    <input type="text" id="ment_name" name="ment_name"><br>
+    <label for="locality">Locality:</label>
+    <input type="text" id="locality" name="locality"><br>
+    <label for="availability">Availability:</label>
+    <input type="text" id="availability" name="availability"><br>
+    <label for="contact">Contact:</label>
+    <input type="text" id="contact" name="contact"><br>
+    <button type="submit">Add Mentor</button>
+  </form>
+  <br>
+  <a href="/mentor_display">View Mentors</a>
+</body>
+</html>

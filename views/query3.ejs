@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Query Results: Jobs in <%= location %></title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+      padding: 2rem 0;
+      background-color: #337ab7;
+      border-bottom: 1px solid #ddd;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 1rem;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #337ab7;
+      color: #fff;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      margin: 1rem;
+      padding: 1rem;
+      border-bottom: 1px solid #ddd;
+      background-color: #fff;
+    }
+
+    li span {
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    a {
+      display: block;
+      padding: 0.5rem 1rem;
+      background-color: #337ab7;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.2s ease;
+    }
+
+    a:hover {
+      background-color: #23527c;
+    }
+  </style>
+</head>
+<body>
+  <h1>Query Results: Jobs in <%= location %></h1>
+  <table border="1">
+    <tr>
+      <th>Job Title</th>
+      <th>Requirements</th>
+      <th>Company</th>
+      <th>Deadline</th>
+    </tr>
+    <% jobs.forEach(job => { %>
+      <tr>
+        <td><%= job.job_title %></td>
+        <td><%= job.requirements %></td>
+        <td><%= job.company %></td>
+        <td><%= job.deadline %></td>
+      </tr>
+    <% }); %>
+  </table>
+  <br>
+  <a href="/">Back to Home</a>
+</body>
+</html>

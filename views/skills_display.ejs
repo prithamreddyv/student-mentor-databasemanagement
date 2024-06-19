@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Skill List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+      padding: 2rem 0;
+      background-color: #ffc107;
+      border-bottom: 1px solid #ddd;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      margin: 1rem;
+      padding: 1rem;
+      border-bottom: 1px solid #ddd;
+      background-color: #fff;
+    }
+
+    li span {
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    a {
+      display: block;
+      padding: 0.5rem 1rem;
+      background-color: #337ab7;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.2s ease;
+    }
+
+    a:hover {
+      background-color: #23527c;
+    }
+  </style>
+</head>
+<body>
+  <h1>Skill List</h1>
+  <ul>
+    <% skills.forEach(skill => { %>
+      <li><%= skill.skill_type %> - <%= skill.skill_name %> - <%= skill.progress %> - <%= skill.stud_id%></li>
+    <% }); %>
+  </ul>
+  <br>
+  <a href="/">Back to Home</a>
+</body>
+</html>

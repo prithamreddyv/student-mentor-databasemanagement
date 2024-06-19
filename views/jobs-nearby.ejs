@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jobs Nearby</title>
+</head>
+<body>
+  <h1>Jobs Nearby</h1>
+  <table border="1">
+    <tr>
+      <th>Job Title</th>
+      <th>Requirements</th>
+      <th>Company</th>
+      <th>Deadline</th>
+      <th>Distance (km)</th>
+    </tr>
+    <% jobs.forEach(job => { %>
+      <tr>
+        <td><%= job.job_title %></td>
+        <td><%= job.requirements %></td>
+        <td><%= job.company %></td>
+        <td><%= job.deadline %></td>
+        <td><%= job.distance.toFixed(2) %></td>
+      </tr>
+    <% }); %>
+  </table>
+  <br>
+  <a href="/">Back to Home</a>
+</body>
+</html>

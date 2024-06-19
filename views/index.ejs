@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Resource App</title>
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0; 
+    }
+
+    h1, h2 {
+      margin: 1rem 0;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    h1 {
+      background-color: #3f51b5; /* Royal blue */
+      color: #fff; /* White text */
+      font-size: 2rem; /* Larger heading */
+    }
+
+    h2 {
+      background-color: #f7f7f7; /* Light gray */
+      color: #333; /* Darker text */
+      font-size: 1.5rem; /* Smaller heading */
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 1rem auto;
+      max-width: 800px; /* Limit width for larger screens */
+    }
+
+    li {
+      margin: 0.5rem 0;
+      padding: 1rem 2rem;
+      border-radius: 5px;
+      background-color: #fff; /* White background */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+      transition: all 0.2s ease-in-out; /* Smooth hover effect */
+    }
+
+    li:hover {
+      background-color: #f5f5f5; /* Lighten background on hover */
+    }
+
+    a {
+      text-decoration: none;
+      color: #333; /* Darker text for links */
+    }
+
+    a:hover {
+      color: #3f51b5; /* Royal blue on hover */
+    }
+
+    /* Data Storing Section */
+
+    .data-storing {
+      border-bottom: 1px solid #ddd; /* Divider line */
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Data Analysis Section */
+
+    .data-analysis {
+      padding-top: 1rem;
+      margin-top: 1rem;
+      border-top: 1px solid #ddd; /* Divider line */
+    }
+
+    /* Forms */
+
+    form {
+      display: flex; /* Align form elements horizontally */
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+
+    label {
+      margin-right: 0.5rem;
+      font-weight: bold;
+    }
+
+    input[type="text"] {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      flex-grow: 1; 
+    }
+
+    button {
+      padding: 0.5rem 1rem;
+      border: 1px solid #3f51b5; 
+      border-radius: 3px;
+      background-color: #3f51b5;
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+    }
+
+    button:hover {
+      background-color: #29388a; 
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to the Smart Education App</h1>
+  <h2>Data Storing Section</h2>
+  <ul>
+    <li><a href="/student_input">Add Student</a></li>
+    <li><a href="/resources_input">Add Resource</a></li>
+    <li><a href="/grants_input">Add Grant</a></li>
+    <li><a href="/loans_input">Add Loan</a></li>
+    <li><a href="/incentives_input">Add Incentive</a></li>
+    <li><a href="/jobs_input">Add Job</a></li>
+    <li><a href="/mentor_input">Add Mentor</a></li>
+    <li><a href="/skills_input">Add Skill</a></li>
+    <li><a href="/digital_divide_input">Add Digital Divide Info</a></li>
+  </ul>
+  <ul>
+    <h2>Data Analysis Section</h2>
+    <li><a href="/query1">View Student Grants</a></li>
+    <li><a href="/query2">View Student Loans</a></li>
+    <li>
+      <form action="/query3" method="GET">
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required>
+        <button type="submit">Search Jobs</button>
+      </form>
+    </li>
+    <li>
+      <form action="/query4" method="GET">
+        <label for="locality">Locality:</label>
+        <input type="text" id="locality" name="locality" required>
+        <button type="submit">Search Mentors</button>
+      </form>
+    </li>
+    <li><a href="/query5">View Student Skills</a>
+    <li><a href="/query6">View Student Incentives</a></li> 
+    <li><a href="/query7">View Student Financial Summary</a></li>
+    <li><a href="/query8">View Mentor and Number of Students</a></li>
+    <li><a href="/query9">View Students without Internet Access</a></li>
+    <li><a href="/query10">View Students with Completed Skills of more than ONE</a></li>
+    <li><a href="/find-jobs">Find Jobs Near You</a></li>
+  </ul>
+</body>
+</html>
